@@ -10,7 +10,7 @@ const Tabs = ({tabs})=>{
             <ul>
                 {
                     tabs.map((tab,index)=>{
-                        return <li onClick={()=>{showMessage(tab.contents)}} key={index}>{tab.title}</li>
+                        return <li onClick={()=>{showMessage(tab.contents)}} key={index}>{tab.titles}</li>
                     })
                 }
             </ul>
