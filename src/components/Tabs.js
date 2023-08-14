@@ -1,9 +1,9 @@
-import React from "react";
+import React,{useState} from "react";
 const Tabs = ({tabs})=>{
+    let [clickTab, setClickTab] = useState("");
 
     function showMessage(content){
-        let message = document.getElementById("message");
-        message.innerText = content;
+        setClickTab(content);
     }
     return (
         <div>
@@ -14,7 +14,9 @@ const Tabs = ({tabs})=>{
                     })
                 }
             </ul>
-            <p id="message"></p>
+            {
+                clickTab && <p>{clickTab}</p>
+            }
         </div>
     );    
 };
